@@ -1,0 +1,18 @@
+.edit-form__close {
+    position: absolute;
+    top: -38px;
+    right: -38px;
+    cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+    .edit-form__close {
+        width: 20px;
+        height: 20px;
+        top: -36px;
+        right: 0px;
+    }
+}
+.edit-form__close:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}

@@ -1,0 +1,10 @@
+.photo-gallary__btnLike {
+    height: 19px;
+    width: 22px;
+    background-image: url('/img/like.svg');
+    cursor: pointer;
+}
+
+.photo-gallary__btnLike:hover {
+    opacity: .5;
+}

@@ -1,0 +1,27 @@
+.edit-form__btn {
+    width: 358px;
+    height: 50px;
+    background: #000000;
+    border-radius: 2px;
+    margin: auto;
+    color: #fff;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    border: 0;
+    border-radius: 2px;
+    padding: 0;
+}
+
+@media screen and (max-width: 767px) {
+    .edit-form__btn {
+        width: 238px;
+        height: 46px;
+        font-size: 14px;
+        line-height: 17px;
+    }
+}
+.edit-form__btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pages/index.css">
+    <title>mesto</title>
+</head>
+<body class="wrapper">
+    <div class="page">
+        <header class="header">
+                <img src="img/logo.svg" alt="Логотип" class="logo">
+        </header>
+        <main class="content">
+            <section class="profile" aria-label="Профиль пользователя">
+                    <div class="profile__info-block">
+                        <img src="img/avatar.jpg" alt="Аватар профиля" class="profile__avatar">
+                        <div class="profile__about">
+                                <p class="profile__name">Жак-Ив Кусто</p>
+                                <form class="profile__form-editBtn"><button class="profile__editBtn"></button></form>
+                            <p class="profile__positioning">Исследователь океана</p>
+                        </div>
+                    </div>
+                    <form class="profile__form-addedBtn">
+                        <button class="profile__addedBtn"></button>
+                    </form>
+            </section>
+            <section class="photo-gallary">
+                    <div class="photo-gallary__card">
+                        <img src="img/karachaevsk.png" alt="Фото Карачаевск" class="photo-gallary__img">
+                        <div class="photo-gallary__caption">
+                            <h2 class="photo-gallary__title">Карачаевск</h2>
+                            <span class="photo-gallary__btnLike"></span>
+                        </div>
+                    </div>
+                    <div class="photo-gallary__card">
+                        <img src="img/elbrus.png" alt="Гора Эльбрус" class="photo-gallary__img">
+                        <div class="photo-gallary__caption">
+                            <h2 class="photo-gallary__title">Гора Эльбрус</h2>
+                            <span class="photo-gallary__btnLike photo-gallary__btnLike_active"></span>
+                        </div>
+                    </div>
+                    <div class="photo-gallary__card">
+                        <img src="img/dombay.png" alt="Домбай" class="photo-gallary__img">
+                        <div class="photo-gallary__caption">
+                            <h2 class="photo-gallary__title">Домбай</h2>
+                            <span class="photo-gallary__btnLike"></span>
+                        </div>
+                    </div>
+                    <div class="photo-gallary__card">
+                        <img src="img/elbrus.png" alt="Гора Эльбрус" class="photo-gallary__img">
+                        <div class="photo-gallary__caption">
+                            <h2 class="photo-gallary__title">Гора Эльбрус</h2>
+                            <span class="photo-gallary__btnLike"></span>
+                        </div>
+                    </div>
+                    <div class="photo-gallary__card">
+                        <img src="img/dombay.png" alt="Фото Карачаевск" class="photo-gallary__img">
+                        <div class="photo-gallary__caption">
+                            <h2 class="photo-gallary__title">Карачаевск</h2>
+                            <span class="photo-gallary__btnLike"></span>
+                        </div>
+                    </div>
+                    <div class="photo-gallary__card">
+                        <img src="img/karachaevsk.png" alt="Карачаево-Черкесия" class="photo-gallary__img">
+                        <div class="photo-gallary__caption">
+                            <h2 class="photo-gallary__title">Карачаево-Черкесия</h2>
+                            <span class="photo-gallary__btnLike"></span>
+                        </div>
+                    </div>
+            </section>
+        </main>
+        <footer class="footer">
+               <p class="footer__copyright">&#169; 2020 Mesto Russia</p>
+        </footer>
+        <section class="edit-form">
+            <div class="edit-form__close">
+                <img class="edit-form__close-img" src="img/close_Icon.svg" alt="Кнопка закрытия окна">
+            </div>
+            <form class="edit-form__container">
+                <h2 class="edit-form__title">Редактировать профиль</h2>
+                <fieldset class="edit-form__input-info">
+                    <input class="edit-form__name" type="text" placeholder="Жак-Ив Кусто" required>
+                    <input class="edit-form__positioning" type="text" placeholder="Исследователь океана" required>
+                </fieldset>
+                <button type="button" class="edit-form__btn">Сохранить</button>
+            </form>
+        </section>
+    </div>
+    
+</body>
+</html>

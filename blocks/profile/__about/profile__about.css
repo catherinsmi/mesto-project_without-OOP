@@ -1,0 +1,9 @@
+.profile__about {
+    display: grid;
+    grid-template-columns: max-content max-content;
+}
+@media screen and (max-width: 767px) {
+    .profile__about {
+       margin: auto;
+    }
+}

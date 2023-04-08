@@ -1,0 +1,19 @@
+.edit-form__input-info {
+    padding-top: 43px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+    border:0;
+}
+
+@media screen and (max-width: 767px) {
+    .edit-form__input-info {
+        padding-top: 75px;
+        padding-bottom: 45px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 25px;
+        border:0;
+    }
+}

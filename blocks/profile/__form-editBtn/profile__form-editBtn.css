@@ -1,0 +1,14 @@
+.profile__form-editBtn {
+    display: inline;
+    padding-left: 23px;
+    line-height: 30px;
+    align-self: self-end;
+}
+
+@media screen and (max-width: 767px) {
+    .profile__form-editBtn {
+        line-height: 28px;
+        padding-left: 10px;
+    
+    }
+}
