@@ -1,5 +1,5 @@
 .edit-form {
-    
+    display: none;
     width: 430px;
     height: 330px;
     position: fixed;
@@ -15,7 +15,5 @@
     .edit-form {
         width: 282px;
         height: 322px;
-      
-        
     }
 }
