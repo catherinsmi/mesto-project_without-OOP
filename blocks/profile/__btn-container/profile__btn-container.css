@@ -1,4 +1,5 @@
-.profile__form-editBtn {
+
+.profile__btn-container {
     display: inline;
     padding-left: 23px;
     line-height: 30px;
@@ -6,7 +7,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .profile__form-editBtn {
+    .profile__btn-container  {
         line-height: 28px;
         padding-left: 10px;
     

@@ -18,55 +18,53 @@
                         <img src="img/avatar.jpg" alt="Аватар профиля" class="profile__avatar">
                         <div class="profile__about">
                                 <p class="profile__name">Жак-Ив Кусто</p>
-                                <form class="profile__form-editBtn"><button class="profile__editBtn"></button></form>
+                                <div class="profile__btn-container"><button type="button" class="profile__editBtn"></button></div>
                             <p class="profile__positioning">Исследователь океана</p>
                         </div>
                     </div>
-                    <form class="profile__form-addedBtn">
-                        <button class="profile__addedBtn"></button>
-                    </form>
+                    <button type="button" class="profile__addedBtn"></button>
             </section>
             <section class="photo-gallary">
                     <div class="photo-gallary__card">
                         <img src="img/karachaevsk.png" alt="Фото Карачаевск" class="photo-gallary__img">
                         <div class="photo-gallary__caption">
                             <h2 class="photo-gallary__title">Карачаевск</h2>
-                            <span class="photo-gallary__btnLike"></span>
+                            <button type="button" class="photo-gallary__btnLike photo-gallary__btnLike_active"></button>
                         </div>
                     </div>
                     <div class="photo-gallary__card">
                         <img src="img/elbrus.png" alt="Гора Эльбрус" class="photo-gallary__img">
                         <div class="photo-gallary__caption">
                             <h2 class="photo-gallary__title">Гора Эльбрус</h2>
-                            <span class="photo-gallary__btnLike photo-gallary__btnLike_active"></span>
+                            <button type="button" class="photo-gallary__btnLike"></button>
                         </div>
                     </div>
                     <div class="photo-gallary__card">
                         <img src="img/dombay.png" alt="Домбай" class="photo-gallary__img">
                         <div class="photo-gallary__caption">
                             <h2 class="photo-gallary__title">Домбай</h2>
-                            <span class="photo-gallary__btnLike"></span>
+                            <button type="button" class="photo-gallary__btnLike"></button>
                         </div>
                     </div>
                     <div class="photo-gallary__card">
                         <img src="img/elbrus.png" alt="Гора Эльбрус" class="photo-gallary__img">
                         <div class="photo-gallary__caption">
                             <h2 class="photo-gallary__title">Гора Эльбрус</h2>
-                            <span class="photo-gallary__btnLike"></span>
+                            <button type="button" class="photo-gallary__btnLike"></button>
                         </div>
                     </div>
                     <div class="photo-gallary__card">
                         <img src="img/dombay.png" alt="Фото Карачаевск" class="photo-gallary__img">
                         <div class="photo-gallary__caption">
                             <h2 class="photo-gallary__title">Карачаевск</h2>
-                            <span class="photo-gallary__btnLike"></span>
+                            <button type="button" class="photo-gallary__btnLike"></button>
                         </div>
                     </div>
                     <div class="photo-gallary__card">
                         <img src="img/karachaevsk.png" alt="Карачаево-Черкесия" class="photo-gallary__img">
                         <div class="photo-gallary__caption">
                             <h2 class="photo-gallary__title">Карачаево-Черкесия</h2>
-                            <span class="photo-gallary__btnLike"></span>
+                            <button type="button" class="photo-gallary__btnLike"></button>
                         </div>
                     </div>
             </section>
@@ -74,17 +72,15 @@
         <footer class="footer">
                <p class="footer__copyright">&#169; 2020 Mesto Russia</p>
         </footer>
-        <section class="edit-form">
-            <div class="edit-form__close">
-                <img class="edit-form__close-img" src="img/close_Icon.svg" alt="Кнопка закрытия окна">
-            </div>
-            <form class="edit-form__container">
-                <h2 class="edit-form__title">Редактировать профиль</h2>
-                <fieldset class="edit-form__input-info">
-                    <input class="edit-form__name" type="text" placeholder="Жак-Ив Кусто" required>
-                    <input class="edit-form__positioning" type="text" placeholder="Исследователь океана" required>
+        <section class="popup">
+            <button class="popup__close"></button>
+            <form class="popup__container">
+                <h2 class="popup__title">Редактировать профиль</h2>
+                <fieldset class="popup__input-container">
+                    <input class="popup__name" type="text" placeholder="Жак-Ив Кусто" required>
+                    <input class="popup__positioning" type="text" placeholder="Исследователь океана" required>
                 </fieldset>
-                <button type="button" class="edit-form__btn">Сохранить</button>
+                <button type="submit" class="popup__btn">Сохранить</button>
             </form>
         </section>
     </div>

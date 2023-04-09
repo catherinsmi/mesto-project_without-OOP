@@ -1,4 +1,4 @@
-.edit-form__positioning {
+.popup__positioning {
     margin: auto;
     width: 358px;
     border: 0;
@@ -6,9 +6,15 @@
     padding-bottom: 13px;
     font-size: 14px;
     line-height: 17px;
+   
 }
 @media screen and (max-width: 767px) {
-    .edit-form__positioning {
+    .popup__positioning {
         width: 238px;
     }
 }
+.popup__positioning::placeholder {
+    color: #000000;
+    
+}
+

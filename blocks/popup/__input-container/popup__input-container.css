@@ -1,4 +1,4 @@
-.edit-form__input-info {
+.popup__input-container {
     padding-top: 43px;
     padding-bottom: 50px;
     display: flex;
@@ -8,7 +8,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .edit-form__input-info {
+    .popup__input-container {
         padding-top: 75px;
         padding-bottom: 45px;
         display: flex;

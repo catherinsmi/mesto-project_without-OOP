@@ -1,7 +1,11 @@
 .photo-gallary__btnLike {
     height: 19px;
     width: 22px;
+    background: transparent;
     background-image: url('/img/like.svg');
+    background-size: cover;
+    background-position: center;
+    border: 0;
     cursor: pointer;
 }
 
