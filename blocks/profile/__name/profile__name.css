@@ -1,15 +1,12 @@
 .profile__name {
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
     font-weight: 500;
     font-size: 42px;
     line-height: 48px;
     margin: 0;
-    align-self: self-end;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
-    max-width: 294px ;
+    max-width: 294px;
 }
 
 @media screen and (max-width: 767px) {
@@ -17,7 +14,7 @@
         font-size: 27px;
         line-height: 33px;
         text-align: center;
-        margin: 0;
-        align-self: self-end;
+        max-width: 190px;
+        padding-left: 28px;
     }
 }

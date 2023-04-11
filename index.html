@@ -10,61 +10,61 @@
 <body class="wrapper">
     <div class="page">
         <header class="header">
-                <img src="img/logo.svg" alt="Логотип" class="logo">
+                <img src="images/logo.svg" alt="Логотип" class="logo">
         </header>
         <main class="content">
             <section class="profile" aria-label="Профиль пользователя">
-                    <div class="profile__info-block">
-                        <img src="img/avatar.jpg" alt="Аватар профиля" class="profile__avatar">
-                        <div class="profile__about">
-                                <p class="profile__name">Жак-Ив Кусто</p>
-                                <div class="profile__btn-container"><button type="button" class="profile__editBtn"></button></div>
-                            <p class="profile__positioning">Исследователь океана</p>
+                    <img src="images/avatar.jpg" alt="Аватар профиля" class="profile__avatar">
+                    <div class="profile__about">
+                        <div class="profile__about-container">
+                            <h1 class="profile__name">Жак-Ив Кусто</h1>
+                            <button type="button" class="profile__edit-btn" aria-label="Редактировать профиль"></button>
                         </div>
+                        <p class="profile__positioning">Исследователь океана</p>
                     </div>
-                    <button type="button" class="profile__addedBtn"></button>
+                    <button type="button" class="profile__added-btn" aria-label="Добавить фото"></button>
             </section>
             <section class="photo-gallary">
                     <div class="photo-gallary__card">
-                        <img src="img/karachaevsk.png" alt="Фото Карачаевск" class="photo-gallary__img">
+                        <img src="images/karachaevsk.png" alt="Фото Карачаевск" class="photo-gallary__img">
                         <div class="photo-gallary__caption">
                             <h2 class="photo-gallary__title">Карачаевск</h2>
-                            <button type="button" class="photo-gallary__btnLike photo-gallary__btnLike_active"></button>
+                            <button type="button" class="photo-gallary__btn-like photo-gallary__btn-like_active" aria-label="Поставить лайк"></button>
                         </div>
                     </div>
                     <div class="photo-gallary__card">
-                        <img src="img/elbrus.png" alt="Гора Эльбрус" class="photo-gallary__img">
+                        <img src="images/elbrus.png" alt="Гора Эльбрус" class="photo-gallary__img">
                         <div class="photo-gallary__caption">
                             <h2 class="photo-gallary__title">Гора Эльбрус</h2>
-                            <button type="button" class="photo-gallary__btnLike"></button>
+                            <button type="button" class="photo-gallary__btn-like" aria-label="Поставить лайк"></button>
                         </div>
                     </div>
                     <div class="photo-gallary__card">
-                        <img src="img/dombay.png" alt="Домбай" class="photo-gallary__img">
+                        <img src="images/dombay.png" alt="Домбай" class="photo-gallary__img">
                         <div class="photo-gallary__caption">
                             <h2 class="photo-gallary__title">Домбай</h2>
-                            <button type="button" class="photo-gallary__btnLike"></button>
+                            <button type="button" class="photo-gallary__btn-like" aria-label="Поставить лайк"></button>
                         </div>
-                    </div>
+                    </div> 
                     <div class="photo-gallary__card">
-                        <img src="img/elbrus.png" alt="Гора Эльбрус" class="photo-gallary__img">
+                        <img src="images/elbrus.png" alt="Гора Эльбрус" class="photo-gallary__img">
                         <div class="photo-gallary__caption">
                             <h2 class="photo-gallary__title">Гора Эльбрус</h2>
-                            <button type="button" class="photo-gallary__btnLike"></button>
+                            <button type="button" class="photo-gallary__btn-like" aria-label="Поставить лайк"></button>
                         </div>
                     </div>
                     <div class="photo-gallary__card">
-                        <img src="img/dombay.png" alt="Фото Карачаевск" class="photo-gallary__img">
+                        <img src="images/dombay.png" alt="Фото Карачаевск" class="photo-gallary__img">
                         <div class="photo-gallary__caption">
                             <h2 class="photo-gallary__title">Карачаевск</h2>
-                            <button type="button" class="photo-gallary__btnLike"></button>
+                            <button type="button" class="photo-gallary__btn-like" aria-label="Поставить лайк"></button>
                         </div>
                     </div>
                     <div class="photo-gallary__card">
-                        <img src="img/karachaevsk.png" alt="Карачаево-Черкесия" class="photo-gallary__img">
+                        <img src="images/karachaevsk.png" alt="Карачаево-Черкесия" class="photo-gallary__img">
                         <div class="photo-gallary__caption">
                             <h2 class="photo-gallary__title">Карачаево-Черкесия</h2>
-                            <button type="button" class="photo-gallary__btnLike"></button>
+                            <button type="button" class="photo-gallary__btn-like" aria-label="Поставить лайк"></button>
                         </div>
                     </div>
             </section>
@@ -73,15 +73,15 @@
                <p class="footer__copyright">&#169; 2020 Mesto Russia</p>
         </footer>
         <section class="popup">
-            <button class="popup__close"></button>
-            <form class="popup__container">
-                <h2 class="popup__title">Редактировать профиль</h2>
-                <fieldset class="popup__input-container">
-                    <input class="popup__name" type="text" placeholder="Жак-Ив Кусто" required>
-                    <input class="popup__positioning" type="text" placeholder="Исследователь океана" required>
-                </fieldset>
-                <button type="submit" class="popup__btn">Сохранить</button>
-            </form>
+            <div class="popup__container">
+                <button type="button" class="popup__close" aria-label="Закрыть редактирование профиля"></button>
+                <h3 class="popup__title">Редактировать профиль</h3>
+                <form class="popup__input-form" name="popup__input-form">
+                        <input class="popup__input popup__input_element_name" name="name" type="text" placeholder="Жак-Ив Кусто" required>
+                        <input class="popup__input popup__input_element_positioning" name="positioning" type="text" placeholder="Исследователь океана" required>
+                    <button type="submit" class="popup__btn">Сохранить</button>
+                </form>
+            </div>
         </section>
     </div>
     

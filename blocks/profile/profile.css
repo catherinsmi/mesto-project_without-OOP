@@ -4,15 +4,14 @@
     margin: 0 auto;
     color: #fff;
     display: flex;
-    justify-content: space-between;
+    column-gap: 30px;
+    align-items: center;
 }
 @media screen and (max-width: 767px) {
     .profile {
         max-width: 282px;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         row-gap: 32px;
-        
     }
 }

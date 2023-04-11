@@ -1,6 +1,8 @@
 .profile__about {
-    display: grid;
-    grid-template-columns: max-content max-content;
+    display: flex;
+    flex-direction: column;
+    
+   
 }
 @media screen and (max-width: 767px) {
     .profile__about {

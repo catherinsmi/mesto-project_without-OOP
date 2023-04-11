@@ -1,23 +1,25 @@
-.profile__addedBtn {
+.profile__added-btn {
     width: 150px;
     height: 50px;
-    display: block;
+    
+    margin-left: auto;
     align-self: center;
+
     background: transparent;
     border: 2px solid #FFFFFF;
     border-radius: 2px;
-    background-image: url('../../../img/add_btn.svg');
+    background-image: url('../../../images/add_btn.svg');
     background-size: cover;
     background-position: center;
 }
 @media screen and (max-width: 767px) {
-    .profile__addedBtn {
+    .profile__added-btn {
         width: 282px;
         height: 50px;
-        background-image: url('../../../img/addBtn_mobile.svg');
+        background-image: url('../../../images/addBtn_mobile.svg');
     }
 }
-.profile__addedBtn:hover {
+.profile__added-btn:hover {
     opacity: 0.6;
     cursor: pointer;
 }
