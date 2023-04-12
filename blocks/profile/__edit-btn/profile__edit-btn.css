@@ -6,6 +6,8 @@
     background-image: url('../../../images/edit_btn.svg');
     background-size: cover;
     background-position: center;
+    background-size: auto auto;
+    background-repeat: no-repeat;
     display: block;
     margin-left: 18px;
 }
@@ -14,7 +16,7 @@
         width: 18px;
         height: 18px;
         margin-left: 10px;
-        background-size: contain;
+        background-image: url('../../../images/edit_btn_mobile.svg');
     }
 }
 
