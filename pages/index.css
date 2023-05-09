@@ -21,11 +21,14 @@
 @import url('../blocks/profile/__added-btn/profile__added-btn.css');
 
  @import url('../blocks/photo-gallary/photo-gallary.css');
-@import url('../blocks/photo-gallary/__card/photo-gallary__card.css');
-@import url('../blocks/photo-gallary/__caption/photo-gallary__caption.css');
-@import url('../blocks/photo-gallary/__title/photo-gallary__title.css');
-@import url('../blocks/photo-gallary/__btn-like/photo-gallary__btn-like.css');
-@import url('../blocks/photo-gallary/__btn-like/_active/photo-gallary__btn-like_active.css'); 
+
+@import url('../blocks/card/card.css');
+@import url('../blocks/card/__img/card__img.css');
+@import url('../blocks/card/__trash/card__trash.css');
+@import url('../blocks/card/__caption/card__caption.css');
+@import url('../blocks/card/__title/card__title.css');
+@import url('../blocks/card/__btn-like/card__btn-like.css');
+@import url('../blocks/card/__btn-like/_active/card__btn-like_active.css'); 
 
 @import url('../blocks/footer/footer.css');
 @import url('../blocks/footer/__copyright/footer__copyright.css'); 
@@ -41,5 +44,20 @@
 @import url('../blocks/popup/__input/_element/popup__input_element_positioning.css');
 @import url('../blocks/popup/__btn/popup__btn.css');
 
+@import url('../blocks/popup-add/popup-add.css');
+@import url('../blocks/popup-add/_opened/popup-add_opened.css');
+@import url('../blocks/popup-add/__container/popup-add__container.css');
+@import url('../blocks/popup-add/__close/popup-add__close.css');
+@import url('../blocks/popup-add/__title/popup-add__title.css');
+@import url('../blocks/popup-add/__input-form/popup-add__input-form.css');
+@import url('../blocks/popup-add/__input/popup-add__input.css');
+@import url('../blocks/popup-add/__input/_element/popup-add__input_element_place.css');
+@import url('../blocks/popup-add/__input/_element/popup-add__input_element_link.css');
+@import url('../blocks/popup-add/__btn/popup-add__btn.css');
 
-
+@import url('../blocks/popup-image/popup-image.css');
+@import url('../blocks/popup-image/_opened/popup-image_opened.css');
+@import url('../blocks/popup-image/__container/popup-image__container.css');
+@import url('../blocks/popup-image/__close/popup-image__close.css');
+@import url('../blocks/popup-image/__image/popup-image__image.css');
+@import url('../blocks/popup-image/__title/popup-image__title.css');
