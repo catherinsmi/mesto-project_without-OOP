@@ -3,6 +3,9 @@
     width: 282px;
     object-fit: cover;
     object-position: center;
-    display: block;
-   
+    display: block; 
+}
+
+.card__img:hover {
+    cursor: pointer;
 }

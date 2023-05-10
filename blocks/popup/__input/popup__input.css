@@ -9,9 +9,7 @@
     box-sizing: border-box;
 }
 
-.popup__input::placeholder {
-    color: #000000;
-}
+
 
 .popup__input:nth-child(2) {
     margin-top: 32px;
