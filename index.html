@@ -31,24 +31,24 @@
         <footer class="footer">
                <p class="footer__copyright">&#169; 2023 Catherinsmi</p>
         </footer>
-        <section class="popup">
+        <section class="popup popup-edit">
             <div class="popup__container">
-                <button type="button" class="popup__close" aria-label="Закрыть редактирование профиля"></button>
+                <button type="button" class="popup__close popup-edit__close" aria-label="Закрыть редактирование профиля"></button>
                 <h3 class="popup__title">Редактировать профиль</h3>
-                <form class="popup__input-form" name="popup__input-form">
-                        <input class="popup__input popup__input_element_name" name="name" type="text" placeholder="Ваше имя" required>
-                        <input class="popup__input popup__input_element_positioning" name="positioning" type="text" placeholder="Ваше хобби" required>
-                    <button type="submit" class="popup__btn">Сохранить</button>
+                <form class="popup__input-form popup-edit__input-form" name="popup-edit__input-form">
+                        <input class="popup__input popup-edit__input_element_name" name="name" type="text" placeholder="Ваше имя" required>
+                        <input class="popup__input popup-edit__input_element_positioning" name="positioning" type="text" placeholder="Ваше хобби" required>
+                    <button type="submit" class="popup__btn popup-edit__btn">Сохранить</button>
                 </form>
             </div>
         </section>
         <section class="popup popup-add">
-            <div class="popup__container popup-add__container">
+            <div class="popup__container">
                 <button type="button" class="popup__close popup-add__close" aria-label="Закрыть окно добавления фотографий"></button>
-                <h3 class="popup__title popup-add__title">Новое место</h3>
+                <h3 class="popup__title">Новое место</h3>
                 <form class="popup__input-form popup-add__input-form" name="popup-add__input-form">
-                        <input class="popup__input popup-add__input popup-add__input_element_place" name="place" type="text" placeholder="Название" required>
-                        <input class="popup__input popup-add__input popup-add__input_element_link" name="link" type="text" placeholder="Ссылка на картинку" required>
+                        <input class="popup__input popup-add__input_element_place" name="place" type="text" placeholder="Название" required>
+                        <input class="popup__input popup-add__input_element_link" name="link" type="text" placeholder="Ссылка на картинку" required>
                     <button type="submit" class="popup__btn popup-add__btn">Создать</button>
                 </form>
             </div>
