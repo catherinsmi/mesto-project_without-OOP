@@ -1,17 +1,16 @@
 .popup__input-form {
-    padding-top: 50px;
-    padding-bottom: 37px;
-    margin: auto;
+    padding: 0;
+    margin: 14px auto 37px auto;
     display: flex;
     flex-direction: column;
-    border:0;
+    border: 0;
     width: 358px;
 }
 
 @media screen and (max-width: 767px) {
     .popup__input-form {
         width: 238px;
-        padding-top: 75px;
+        padding-top: 34px;
         padding-bottom: 25px;
     }
 }
