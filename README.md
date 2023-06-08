@@ -5,7 +5,7 @@
 
  [Ссылка на проект](https://catherinsmi.github.io/mesto-project/)
 
-![](images/Mesto.png)
+![](src/images/Mesto.png)
 
 
 В проекте использовались:

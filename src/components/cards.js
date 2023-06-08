@@ -1,40 +1,9 @@
-import {gallaryContainer, cardTemplate, bigImage, titleBigImage, inputCardPlace, inputCardLink, popupBigImage, popupEditForm, popupAddCardForm, inputProfilePositioning, inputProfileName, formInputAddCardForm, formInputEditForm, profilePositioning, profileName} from './index.js'
+import {gallaryContainer, cardTemplate, bigImage, titleBigImage, inputCardPlace, inputCardLink, popupBigImage, popupAddCardForm} from './constants'
 import {openPopup, closePopup} from './utils.js';
 
 
-const yakitoriImg = new URL('../images/jeff-wang-c22X4t4S4AM-unsplash.jpg', import.meta.url);
-const neonImg = new URL('../images/sam-wong-gUq-THbm_zY-unsplash.jpg', import.meta.url);
-const tokyoImg = new URL('../images/max-bender-hyc70XzSUbw-unsplash.jpg', import.meta.url);
-const meguroImg = new URL('../images/sora-sagano-8sOZJ8JF0S8-unsplash.jpg', import.meta.url);
-const osakaImg = new URL('../images/masahiro-miyagi-j_t8PaSQLJg-unsplash.jpg', import.meta.url);
-const towerImg = new URL('../images/arif-angga-ibrahim--y6oZ2pPyIc-unsplash.jpg', import.meta.url);
 
-export const initialCards = [
-    {
-      name: 'Yakitori',
-      link: yakitoriImg 
-    },
-    {
-      name: 'Neon',
-      link: neonImg 
-    },
-    {
-      name: 'Tokyo',
-      link: tokyoImg
-    },
-    {
-      name: 'Meguro River',
-      link: meguroImg
-    },
-    {
-      name: 'Osaka',
-      link: osakaImg
-    },
-    {
-      name: 'Tokyo Tower',
-      link: towerImg
-    }
-  ]; 
+
 
   export const addCard = function (evt) {
     evt.preventDefault();
@@ -46,7 +15,7 @@ export const initialCards = [
 
     renderCard(gallaryContainer, cardInformation)
     closePopup(popupAddCardForm);
-    evt.target.reset();
+    evt.target.reset()
 
 }
 export const createCard = function(item) {
@@ -56,9 +25,9 @@ export const createCard = function(item) {
     const place = item.name;
     const link = item.link;
     
-    cardElement.querySelector('.card__img').src = link;
+    imageOfCard.src = link;
     cardElement.querySelector('.card__title').textContent = place;
-    imageOfCard.setAttribute('alt', place);
+    imageOfCard.alt = place;;
     
     cardElement.addEventListener('click', function(evt){
         if(evt.target.classList.contains('card__btn-like')){
@@ -68,8 +37,7 @@ export const createCard = function(item) {
     });
 
     cardElement.querySelector('.card__trash').addEventListener('click', function(){    
-        const deleteItem = buttonDeleteCard .closest('.card');
-        deleteItem.remove();
+        cardElement.remove();
     });
 
     imageOfCard .addEventListener('click', function() {
