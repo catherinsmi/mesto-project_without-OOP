@@ -3,7 +3,6 @@ import {buttonCloseEditForm, buttonCloseAddCardForm, buttonCloseBigImageForm, bu
 import {renderCard, addCard} from './cards.js';
 import {initialCards} from './initialCards.js';
 import {openPopup, closePopup} from './modal.js';
-import {} from './modal'
 import { enableValidation} from './validate'
 
 const fillProfileInputs = function(){

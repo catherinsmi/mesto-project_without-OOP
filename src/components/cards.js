@@ -1,9 +1,5 @@
 import {gallaryContainer, cardTemplate, bigImage, titleBigImage, inputCardPlace, inputCardLink, popupBigImage, popupAddCardForm} from './constants'
-import {openPopup, closePopup} from './utils.js';
-
-
-
-
+import {openPopup, closePopup} from './modal.js';
 
   export const addCard = function (evt) {
     evt.preventDefault();

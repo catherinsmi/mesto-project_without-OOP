@@ -1,6 +1,5 @@
 import {popups} from './constants.js'
 
-
 export const openPopup = function(popup) {
     popup.classList.add('popup_opened')
    
