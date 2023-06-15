@@ -1,40 +1,38 @@
-import {gallaryContainer, cardTemplate, bigImage, titleBigImage, inputCardPlace, inputCardLink, popupBigImage, popupAddCardForm} from './constants'
-import {openPopup, closePopup} from './modal.js';
+import { cardTemplate, bigImage, titleBigImage, popupBigImage } from './constants.js'
+import { openPopup } from './modal.js';
+import { handleClickButtonLike, handleClickDeleteCard } from './utils.js';
 
-  export const addCard = function (evt) {
-    evt.preventDefault();
-
-    const cardInformation = {
-        name: inputCardPlace.value,
-        link: inputCardLink.value, 
-    };
-
-    renderCard(gallaryContainer, cardInformation)
-    closePopup(popupAddCardForm);
-    evt.target.reset()
-
+export const renderCard = function(container, item, idUser) {
+    container.prepend(createCard(item, idUser));
 }
-export const createCard = function(item) {
+
+export const createCard = function(item, idUser) {
     const cardElement = cardTemplate.querySelector('.card').cloneNode(true);
     const buttonDeleteCard = cardElement.querySelector('.card__trash');
     const imageOfCard = cardElement.querySelector('.card__img');
+    const buttonLike = cardElement.querySelector('.card__btn-like');
+    const summurizeLike = cardElement.querySelector('.card__like-sum');
     const place = item.name;
     const link = item.link;
-    
+    const likes = item.likes.length;
+    const id = item.owner._id
+  
     imageOfCard.src = link;
     cardElement.querySelector('.card__title').textContent = place;
+    cardElement.querySelector('.card__like-sum').textContent = likes;
     imageOfCard.alt = place;;
-    
-    cardElement.addEventListener('click', function(evt){
-        if(evt.target.classList.contains('card__btn-like')){
-            evt.target.classList.toggle('card__btn-like_active')
-        }
-        
-    });
 
-    cardElement.querySelector('.card__trash').addEventListener('click', function(){    
-        cardElement.remove();
-    });
+    if(checkMyLike(item, idUser)){
+        buttonLike.classList.add('card__btn-like_active');
+    }
+
+    buttonLike.addEventListener('click', () => handleClickButtonLike(item, buttonLike, summurizeLike));
+
+    if(id !== idUser) {
+        buttonDeleteCard.remove()
+    }
+
+    buttonDeleteCard.addEventListener('click', () => handleClickDeleteCard(item, cardElement));
 
     imageOfCard .addEventListener('click', function() {
         bigImage.setAttribute('src', link);
@@ -46,10 +44,8 @@ export const createCard = function(item) {
     return cardElement;
 }
 
-export const renderCard = function(container, item) {
-    const card = createCard(item)
-    container.prepend(card);
+const checkMyLike = function(item, idUser){
+    return item.likes.some((data) => {
+        return data._id === idUser
+      })
 }
-
-
-

@@ -7,14 +7,12 @@
     background-position: center;
     border: 0;
     cursor: pointer;
-
     position: absolute;
     top: 20px;
     right: 20px;
     z-index: 10;
-
 }
-
 .card__trash:hover {
     opacity: .6;
 }
+

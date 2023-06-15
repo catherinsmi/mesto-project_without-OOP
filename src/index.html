@@ -13,15 +13,18 @@
         </header>
         <main class="content">
             <section class="profile" aria-label="Профиль пользователя">
+                <div class="profile__avatar-container">
                     <img src="<%=require('./images/avatar_neko.png')%>" alt="Аватар профиля" class="profile__avatar">
-                    <div class="profile__about">
-                        <div class="profile__about-container">
-                            <h1 class="profile__name">Maneki-neko</h1>
-                            <button type="button" class="profile__edit-btn" aria-label="Редактировать профиль"></button>
-                        </div>
-                        <p class="profile__positioning">Japanophil</p>
-                    </div>
-                    <button type="button" class="profile__added-btn" aria-label="Добавить фото"></button>
+                    <div class="profile__overlay-avatar"></div>
+                </div>
+                <div class="profile__about">
+                     <div class="profile__about-container">
+                        <h1 class="profile__name">Maneki-neko</h1>
+                        <button type="button" class="profile__edit-btn" aria-label="Редактировать профиль"></button>
+                </div>
+                    <p class="profile__positioning">Japanophil</p>
+                </div>
+                <button type="button" class="profile__added-btn" aria-label="Добавить фото"></button>
             </section>
             <section class="photo-gallary">
 
@@ -36,11 +39,11 @@
                 <h3 class="popup__title">Редактировать профиль</h3>
                 <form class="popup__input-form popup-edit__input-form" name="popup-edit__input-form" novalidate>
                     <label class="popup__input-label">
-                        <input class="popup__input popup-edit__input_element_name" id="name-input" name="name" type="text" placeholder="Ваше имя" required minlength="2" maxlength="40" pattern="^[А-Яа-яa-zA-ZЁё\s-]+$" data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
+                        <input class="popup__input popup-edit__input_element_name" id="name-input" name="name" type="text" placeholder="Ваше имя" required minlength="2" maxlength="40" pattern="^[А-Яа-яa-zA-ZЁё\s\-]+$" data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
                         <span class="popup__input-error name-input-error"></span>
                     </label>
                     <label class="popup__input-label">
-                        <input class="popup__input popup-edit__input_element_positioning" id="positioning-input" name="positioning" type="text" placeholder="Ваше хобби" required minlength="2" maxlength="200" pattern="^[А-Яа-яa-zA-ZЁё\s-]+$" data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
+                        <input class="popup__input popup-edit__input_element_positioning" id="positioning-input" name="positioning" type="text" placeholder="Ваше хобби" required minlength="2" maxlength="200" pattern="^[А-Яа-яa-zA-ZЁё\s\-]+$" data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
                         <span class="popup__input-error positioning-input-error"></span>
                     </label>
                     <button type="submit" class="popup__btn popup-edit__btn">Сохранить</button>
@@ -53,7 +56,7 @@
                 <h3 class="popup__title">Новое место</h3>
                 <form class="popup__input-form popup-add__input-form" name="popup-add__input-form" novalidate>
                     <label class="popup__input-label">
-                        <input class="popup__input popup-add__input_element_place" id="place-input" name="place" type="text" placeholder="Название" required minlength="2" maxlength="30" pattern="^[А-Яа-яa-zA-ZЁё\s-]+$" data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
+                        <input class="popup__input popup-add__input_element_place" id="place-input" name="place" type="text" placeholder="Название" required minlength="2" maxlength="30" pattern="^[А-Яа-яa-zA-ZЁё\s\-]+$" data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы">
                         <span class="popup__input-error place-input-error"></span>
                     </label>
                     <label class="popup__input-label">
@@ -61,6 +64,19 @@
                         <span class="popup__input-error link-input-error"></span>
                     </label>
                     <button type="submit" class="popup__btn popup-add__btn">Создать</button>
+                </form>
+            </div>
+        </section>
+        <section class="popup popup-avatar">
+            <div class="popup__container">
+                <button type="button" class="popup__close popup-avatar__close" aria-label="Закрыть окно редактирования аватара"></button>
+                <h3 class="popup__title">Обновить аватар</h3>
+                <form class="popup__input-form popup-avatar__input-form" name="popup-add__input-form" novalidate>
+                    <label class="popup__input-label">
+                        <input class="popup__input popup-avatar__input_element_link" id="avatar-input" name="avatar" type="text" placeholder="Ссылка на новый аватар" required type="url">
+                        <span class="popup__input-error avatar-input-error"></span>
+                    </label>
+                    <button type="submit" class="popup__btn popup-avatar__btn">Сохранить</button>
                 </form>
             </div>
         </section>
@@ -81,7 +97,7 @@
              <h2 class="card__title"></h2>
              <div class="card__like-block">
                 <button type="button" class="card__btn-like" aria-label="Поставить лайк"></button>
-                <span></span>
+                <span class="card__like-sum"></span>
              </div>
         </div>
       </template>

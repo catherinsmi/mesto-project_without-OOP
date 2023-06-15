@@ -1,8 +1,9 @@
-import {popups} from './constants.js'
+import { popups } from './constants.js'
+import { clearError } from './utils.js'
 
 export const openPopup = function(popup) {
+    clearError(popup)
     popup.classList.add('popup_opened')
-   
     document.addEventListener('keydown', closePopupByEsc)
 }
 
@@ -12,7 +13,7 @@ export const closePopup = function(popup) {
 }
 
 popups.forEach((popup) => {
-    popup.addEventListener('click', (evt) => {
+    popup.addEventListener('mousedown', (evt) => {
         if(evt.target === evt.currentTarget || evt.target.classList.contains('popup__close')) {
             closePopup(evt.currentTarget);
         }
