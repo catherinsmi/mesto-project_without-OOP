@@ -1,6 +1,7 @@
 export const buttonCloseEditForm = document.querySelector('.popup-edit__close');
 export const buttonCloseAddCardForm = document.querySelector('.popup-add__close');
 export const buttonCloseBigImageForm = document.querySelector('.popup-image__close');
+export const closeButtons = document.querySelectorAll('.popup__close');
 export const buttonOpenEditForm = document.querySelector('.profile__edit-btn');
 export const buttonOpenAddCardForm = document.querySelector('.profile__added-btn');
 export const popups = document.querySelectorAll('.popup');

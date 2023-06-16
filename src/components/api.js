@@ -11,12 +11,9 @@ function onResponse(res) {
 }
 
 export function getInfoAboutUser(){
-    return fetch('https://nomoreparties.co/v1/plus-cohort-25/users/me ', {
-        method: 'GET',
-        headers: {
-          authorization: 'c9ee1440-7613-4065-959f-2ee974e55dba'
-        }
-      })
+    return fetch(`${config.baseUrl}/users/me`, {
+        headers: config.headers
+    })
       .then(onResponse)
 }
 

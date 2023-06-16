@@ -26,12 +26,26 @@ export const checkValidity = function(formElement, inputElement, config) {
     }
 }
 
+const disableButton = function(buttonElement, config){
+    buttonElement.classList.add(config.inactiveButtonClass);
+    buttonElement.disabled = true;
+}
+
+const enableButton = function(buttonElement, config){
+    buttonElement.classList.remove(config.inactiveButtonClass);
+    buttonElement.disabled = false;
+}
+
 const setEventListenersOnInput = function(formElement, config){
     const inputList = Array.from(formElement.querySelectorAll(config.inputSelector));
     const buttonElement = formElement.querySelector(config.submitButtonSelector);
     
     toggleButtonState(inputList, buttonElement, config);
-    
+
+    formElement.addEventListener('reset', () => {
+        disableButton(buttonElement, config)
+      });
+
     inputList.forEach((inputElement) => {
         inputElement.addEventListener('input', function() {
             checkValidity(formElement, inputElement, config);
@@ -40,19 +54,9 @@ const setEventListenersOnInput = function(formElement, config){
     })
 }
 
-const setEventListenersOnSubmit = function(formElement, config){
-    const buttonElement = formElement.querySelector(config.submitButtonSelector);
-   
-    formElement.addEventListener('submit', () => {
-            buttonElement.classList.add(config.inactiveButtonClass);
-            buttonElement.disabled = true;
-        })
-}
-
 export const enableValidation = function(config){
     const formList = Array.from(document.querySelectorAll(config.formSelector));
     formList.forEach((formElement) => setEventListenersOnInput(formElement, config));
-    formList.forEach((formElement) => setEventListenersOnSubmit(formElement, config))
 }
 
 export const hasInvalidInput = function(inputList){
@@ -63,20 +67,9 @@ export const hasInvalidInput = function(inputList){
 
 export const toggleButtonState = function(inputList, buttonElement, config){
     if(hasInvalidInput(inputList)){
-        buttonElement.classList.add(config.inactiveButtonClass);
-        buttonElement.disabled = true;
+        disableButton(buttonElement, config)
     } else {
-        buttonElement.classList.remove(config.inactiveButtonClass);
-        buttonElement.disabled = false;
+        enableButton(buttonElement, config)
     } 
 }
 
-export const toggleButtonState2 = function(buttonElement, isDisabled, config){
-    if(isDisabled){
-        buttonElement.classList.add(config.inactiveButtonClass);
-        buttonElement.disabled = true;
-    } else {
-        buttonElement.classList.remove(config.inactiveButtonClass);
-        buttonElement.disabled = false;
-    }
-}

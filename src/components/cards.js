@@ -1,6 +1,44 @@
 import { cardTemplate, bigImage, titleBigImage, popupBigImage } from './constants.js'
 import { openPopup } from './modal.js';
-import { handleClickButtonLike, handleClickDeleteCard } from './utils.js';
+import { putLike, removeLike, deleteCard } from './api.js';
+
+function checkMyLike (item, idUser){
+    return item.likes.some((data) => {
+        return data._id === idUser
+      })
+}
+
+function handleClickButtonLike (item, buttonLike, summurizeLike) {
+    if(buttonLike.classList.contains('card__btn-like_active')){
+        removeLike(item._id)
+            .then((data) => {
+                summurizeLike.textContent = data.likes.length;
+                buttonLike.classList.remove('card__btn-like_active');
+            }) 
+            .catch((err) => {
+                console.log(err)
+            })
+    } else {
+        putLike(item._id)
+            .then((data) => {
+                summurizeLike.textContent = data.likes.length;
+                buttonLike.classList.add('card__btn-like_active');
+            }) 
+            .catch((err) => {
+                console.log(err)
+            })
+    }
+}
+
+function handleClickDeleteCard(item, cardElement){  
+    deleteCard(item._id)
+    .then(() => {
+        cardElement.remove();
+    }) 
+    .catch((err) => {
+        console.log(err)
+    }) 
+}
 
 export const renderCard = function(container, item, idUser) {
     container.prepend(createCard(item, idUser));
@@ -19,7 +57,7 @@ export const createCard = function(item, idUser) {
   
     imageOfCard.src = link;
     cardElement.querySelector('.card__title').textContent = place;
-    cardElement.querySelector('.card__like-sum').textContent = likes;
+    summurizeLike.textContent = likes;
     imageOfCard.alt = place;;
 
     if(checkMyLike(item, idUser)){
@@ -44,8 +82,3 @@ export const createCard = function(item, idUser) {
     return cardElement;
 }
 
-const checkMyLike = function(item, idUser){
-    return item.likes.some((data) => {
-        return data._id === idUser
-      })
-}
