@@ -1,5 +1,5 @@
 import '../index.css';
-import { buttonOpenEditForm, buttonOpenAddCardForm, popupEditForm, popupAddCardForm, popupAvatar, profileName, profilePositioning, formInputEditForm, formInputAddCardForm, formInputAvatarForm, inputProfileName, inputProfilePositioning, gallaryContainer, profileAvatar, config, inputCardPlace, inputCardLink, popups, closeButtons, overlayAvatar } from './constants.js'
+import { buttonOpenEditForm, buttonOpenAddCardForm, popupEditForm, popupAddCardForm, popupAvatar, profileName, profilePositioning, formInputEditForm, formInputAddCardForm, formInputAvatarForm, inputProfileName, inputProfilePositioning, gallaryContainer, profileAvatar, config, inputCardPlace, inputCardLink, popups, overlayAvatar } from './constants.js'
 import { renderCard } from './cards.js';
 import { openPopup, closePopup, handleEditAvatar } from './modal.js';
 import { enableValidation } from './validate'
@@ -7,11 +7,6 @@ import { editProfile, getFulfilledRequests, addCard } from './api.js';
 import { renderLoading } from './utils.js';
 
 let idUser = null;
-
-closeButtons.forEach((button) => {
-    const popup = button.closest('.popup');
-    button.addEventListener('click', () => closePopup(popup));
-  });
 
 popups.forEach((popup) => {
     popup.addEventListener('mousedown', (evt) => {
@@ -24,14 +19,16 @@ popups.forEach((popup) => {
 getFulfilledRequests()
     .then(([infoAboutUser, cards]) => {
         profileAvatar.src = infoAboutUser.avatar
-        profileName.textContent = infoAboutUser.name;
-        profilePositioning.textContent = infoAboutUser.about;
-        idUser = infoAboutUser._id;
+        profileName.textContent = infoAboutUser.name
+        profilePositioning.textContent = infoAboutUser.about
+        idUser = infoAboutUser._id
 
         cards.forEach((card) => {
-            renderCard(gallaryContainer, card, idUser);
+            renderCard(gallaryContainer, card, idUser)
     })
-
+})
+    .catch((err) => {
+    console.error(`Ошибка: ${err}`);
 })
 
 const fillProfileInputs = function(){
@@ -54,7 +51,6 @@ const handleEditProfile = function(evt) {
         evt.target.reset();
            })
         .catch((err) => {
-            console.log('мы зашли в err')
              console.error(`Ошибка: ${err}`);
            })
         .finally(() => {
